@@ -1,0 +1,2132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home" />
+
+        <Button
+            android:id="@+id/recipes_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/recipes" />
+    </LinearLayout>
+
+    <ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="24dp"
+    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--Bearing-->
+                    <TextView
+                        android:id="@+id/bearingTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_bearing"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/bearing_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_bearing"
+                            android:src="@drawable/bearing" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addBearing"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/bearingCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusBearing"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Chest-->
+                    <TextView
+                        android:id="@+id/chestTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_chest"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chest_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_chest"
+                            android:src="@drawable/chest" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addChest"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/chestCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusChest"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Battery Container-->
+                    <TextView
+                        android:id="@+id/containerBatteryTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_battery_container"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/containerBattery_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_battery_container"
+                            android:src="@drawable/container_battery" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addBatteryContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/batteryContainerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusBatteryContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Gas Container-->
+                    <TextView
+                        android:id="@+id/containerGasTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_gas_container"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/containerGas_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_gas_container"
+                            android:src="@drawable/container_gas" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addGasContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/gasContainerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusGasContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Controller-->
+                    <TextView
+                        android:id="@+id/controllerTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_controller"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/controller_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_controller"
+                            android:src="@drawable/controller" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addController"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/controllerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusController"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Electric Engine-->
+                    <TextView
+                        android:id="@+id/electricEngineTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_electric_engine"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/electricEngine_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_electric_engine"
+                            android:src="@drawable/electric_engine" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addElectricEngine"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/electricEngineCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusElectricEngine"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Headlight-->
+                    <TextView
+                        android:id="@+id/headlightTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_headlight"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/headlight_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_headlight"
+                            android:src="@drawable/headlight" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addHeadlight"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/headlightCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusHeadlight"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Piston-->
+                    <TextView
+                        android:id="@+id/pistonTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_piston"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/piston_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_piston"
+                            android:src="@drawable/piston" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addPiston"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/pistonCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusPiston"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Saddle-->
+                    <TextView
+                        android:id="@+id/saddleTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_saddle"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/saddle_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_saddle"
+                            android:src="@drawable/saddle" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSaddle"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/saddleCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSaddle"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Driver's Seat-->
+                    <TextView
+                        android:id="@+id/seatDriversTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_drivers_seat"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/seatDrivers_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_drivers_seat"
+                            android:src="@drawable/seat_drivers" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addDriverSeat"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/driverSeatCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusDriverSeat"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Sensor-->
+                    <TextView
+                        android:id="@+id/sensorTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_sensor"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/sensor_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_sensor"
+                            android:src="@drawable/sensor" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSensor"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/sensorCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSensor"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Sport Suspension-->
+                    <TextView
+                        android:id="@+id/suspensionSportTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_sport_suspension"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/suspensionSpot_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_sport_suspension"
+                            android:src="@drawable/suspension_sport" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSportSuspension"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/sportSuspensionCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSportSuspension"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Thruster-->
+                    <TextView
+                        android:id="@+id/thrusterTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_thruster"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/thruster_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_thruster"
+                            android:src="@drawable/thruster" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addThruster"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/thrusterCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusThruster"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Vacuum Pipe-->
+                    <TextView
+                        android:id="@+id/vacuumPipeTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_vacuum_pipe"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/vacuumPipe_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_vacuum_pipe"
+                            android:src="@drawable/vacuum_pipe" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addVacuumPipe"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/vacuumPipeCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusVacuumPipe"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Vacuum Pump-->
+                    <TextView
+                        android:id="@+id/vacuumPumpTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_vacuum_pump"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/vacuumPump_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_vacuum_pump"
+                            android:src="@drawable/vacuum_pump" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addVacuumPump"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/vacuumPumpCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusVacuumPump"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Wheel-->
+                    <TextView
+                        android:id="@+id/wheelTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_wheel"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/wheel_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_wheel"
+                            android:src="@drawable/wheel" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addWheel"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/wheelCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusWheel"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--Button-->
+                    <TextView
+                        android:id="@+id/buttonTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_button"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/button_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_button"
+                            android:src="@drawable/button" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addButton"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/buttonCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusButton"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Large Chest-->
+                    <TextView
+                        android:id="@+id/largeChestTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_large_chest"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/largeChest_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_large_chest"
+                            android:src="@drawable/chest_large" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addLargeChest"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/largeChestCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusLargeChest"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Chemical Container-->
+                    <TextView
+                        android:id="@+id/containerChemical_tvTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_chemical_container"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/containerChemical_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_chemical_container"
+                            android:src="@drawable/container_chemical" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addContainerChemical"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/containerChemicalCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusContainerChemical"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Water Container-->
+                    <TextView
+                        android:id="@+id/containerWaterTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_water_container"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/containerWater_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_water_container"
+                            android:src="@drawable/container_water" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addWaterContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/waterContainerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusWaterContainer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Drill-->
+                    <TextView
+                        android:id="@+id/drillTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_drill"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/drill_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_drill"
+                            android:src="@drawable/drill" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addDrill"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/drillCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusDrill"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Gas Engine-->
+                    <TextView
+                        android:id="@+id/gasEngineTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_gas_engine"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/gasEngine_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_gas_engine"
+                            android:src="@drawable/gas_engine" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addGasEngine"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/gasEngineCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusGasEngine"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Logic Gate-->
+                    <TextView
+                        android:id="@+id/logicGateTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_logic_gate"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/logicGate_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_logic_gate"
+                            android:src="@drawable/logic_gate" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addLogicGate"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/logicGateCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusLogicGate"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Driver's Saddle-->
+                    <TextView
+                        android:id="@+id/saddleDriversTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_drivers_saddle"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/saddleDrivers_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_drivers_saddle"
+                            android:src="@drawable/saddle_drivers" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addDriverSaddle"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/driverSaddleCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusDriverSaddle"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Saw Blade-->
+                    <TextView
+                        android:id="@+id/sawBladeTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_saw_blade"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/sawBlade_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_saw_blade"
+                            android:src="@drawable/saw_blade" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSawBlade"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/sawBladeCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSawBlade"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Seat-->
+                    <TextView
+                        android:id="@+id/seatTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_seat"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/seat_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_seat"
+                            android:src="@drawable/seat" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSeat"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/seatCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSeat"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Off-Road Suspension-->
+                    <TextView
+                        android:id="@+id/suspensionOffRoadTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_off_road_suspension"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/suspensionOffRoad_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_off_road_suspension"
+                            android:src="@drawable/suspension_off_road" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSuspensionOffRoad"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/suspensionOffRoadCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSuspensionOffRoad"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Switch-->
+                    <TextView
+                        android:id="@+id/switchTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_switch"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/switch_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_switch"
+                            android:src="@drawable/switch_icon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addSwitch"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/switchCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusSwitch"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Timer-->
+                    <TextView
+                        android:id="@+id/timerTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_timer"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/timer_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_timer"
+                            android:src="@drawable/timer" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addTimer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/timerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusTimer"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Vacuum Pipe Corner-->
+                    <TextView
+                        android:id="@+id/vacuumPipeCornerTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_vacuum_pipe_corner"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/vacuumPipeCorner_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_vacuum_pipe_corner"
+                            android:src="@drawable/vacuum_pipe_corner" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addVacuumPipeCorner"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/vacuumPipeCornerCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusVacuumPipeCorner"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Water Cannon-->
+                    <TextView
+                        android:id="@+id/waterCannonTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_water_cannon"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/waterCannon_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_water_cannon"
+                            android:src="@drawable/water_cannon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addWaterCannon"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/waterCannonCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusWaterCannon"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--Big Wheel-->
+                    <TextView
+                        android:id="@+id/bigWheelTitle_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_wheel_big"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/wheelBig_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:contentDescription="@string/title_wheel_big"
+                            android:src="@drawable/wheel_big" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/addBigWheel"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="+" />
+
+                            <TextView
+                                android:id="@+id/bigWheelCount_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/minusBigWheel"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+
+            <TextView
+                android:id="@+id/total_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="36sp" />
+
+            // Scrap Metal
+            <TextView
+                android:id="@+id/scrapMetalTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scrapMetalTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/scrapMetal_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/scrapMetalTitle"
+                    android:src="@drawable/metal_block_scrap" />
+
+                <TextView
+                    android:id="@+id/scrapMetal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Metal Block 1
+            <TextView
+                android:id="@+id/metalBlock1Title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/metalBlock1Title"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/metalBlock1_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/metalBlock1Title"
+                    android:src="@drawable/metal_block1" />
+
+                <TextView
+                    android:id="@+id/metalBlock1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Scrap Stone
+            <TextView
+                android:id="@+id/scrapStoneTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scrapStoneBlockTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/scrapStone_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/scrapStoneBlockTitle"
+                    android:src="@drawable/stone_block_scrap" />
+
+                <TextView
+                    android:id="@+id/scrapStone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Wood Block 1
+            <TextView
+                android:id="@+id/woodBlock1Title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/woodBlock1Title"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/woodBlock1Title_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/woodBlock1Title"
+                    android:src="@drawable/wood_block1" />
+
+                <TextView
+                    android:id="@+id/woodBlock1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Component Kit
+            <TextView
+                android:id="@+id/componentKitTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/componentKitTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/componentKit_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/componentKitTitle"
+                    android:src="@drawable/component_kit" />
+
+                <TextView
+                    android:id="@+id/componentKit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Circuit Board
+            <TextView
+                android:id="@+id/circuitBoardTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/circuitBoardTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/circuitBoard_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/circuitBoardTitle"
+                    android:src="@drawable/circuit_board" />
+
+                <TextView
+                    android:id="@+id/circuitBoard_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Water
+            <TextView
+                android:id="@+id/waterTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/waterTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/water_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/waterTitle"
+                    android:src="@drawable/water" />
+
+                <TextView
+                    android:id="@+id/water_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Ember
+            <TextView
+                android:id="@+id/emberTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emberTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/ember_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/emberTitle"
+                    android:src="@drawable/ember" />
+
+                <TextView
+                    android:id="@+id/ember_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Clam Glue
+            <TextView
+                android:id="@+id/clamGlueTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clamGlueTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/clamGlue_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/clamGlueTitle"
+                    android:src="@drawable/glue_clam" />
+
+                <TextView
+                    android:id="@+id/clamGlue_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Oil
+            <TextView
+                android:id="@+id/oilTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/oilTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/oil_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/oilTitle"
+                    android:src="@drawable/crude_oil" />
+
+                <TextView
+                    android:id="@+id/oil_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Chemical
+            <TextView
+                android:id="@+id/chemicalTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chemicalTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/chemical_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/chemicalTitle"
+                    android:src="@drawable/chemicals" />
+
+                <TextView
+                    android:id="@+id/chemical_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Bee's Wax
+            <TextView
+                android:id="@+id/beesWaxTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/beesWaxTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/beesWax_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/beesWaxTitle"
+                    android:src="@drawable/bees_wax" />
+
+                <TextView
+                    android:id="@+id/beesWax_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Cotton
+            <TextView
+                android:id="@+id/cottonTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cottonTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/cotton_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/cottonTitle"
+                    android:src="@drawable/cotton" />
+
+                <TextView
+                    android:id="@+id/cotton_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Glow
+            <TextView
+                android:id="@+id/glowTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/glowTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/glow_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/glowTitle"
+                    android:src="@drawable/glow" />
+
+                <TextView
+                    android:id="@+id/glow_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            // Flower Pigment
+            <TextView
+                android:id="@+id/flowerPigmentTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/flowerPigmentTitle"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/flowerPigment_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/flowerPigmentTitle"
+                    android:src="@drawable/pigment_flower" />
+
+                <TextView
+                    android:id="@+id/flowerPigment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

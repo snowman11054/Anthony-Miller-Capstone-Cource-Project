@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home" />
+
+        <Button
+            android:id="@+id/calculator_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/calculator" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/partsTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/parts_title"
+                android:textAlignment="center"
+                android:textSize="32sp" />
+
+            <!--Bearing-->
+            <TextView
+                android:id="@+id/bearingTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_bearing" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/bearing_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_bearing"
+                    android:src="@drawable/bearing" />
+
+                <TextView
+                    android:id="@+id/bearing_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/bearing" />
+            </LinearLayout>
+
+            <!--Button-->
+            <TextView
+                android:id="@+id/buttonTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_button" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/button_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_button"
+                    android:src="@drawable/button" />
+
+                <TextView
+                    android:id="@+id/button_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/button" />
+            </LinearLayout>
+
+            <!--Chest-->
+            <TextView
+                android:id="@+id/chestTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_chest" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/chest_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_chest"
+                    android:src="@drawable/chest" />
+
+                <TextView
+                    android:id="@+id/chest_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/chest" />
+            </LinearLayout>
+
+            <!--Large Chest-->
+            <TextView
+                android:id="@+id/chestLargeTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_large_chest" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/chestLarge_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_large_chest"
+                    android:src="@drawable/chest_large" />
+
+                <TextView
+                    android:id="@+id/chestLarge_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/large_chest" />
+            </LinearLayout>
+
+            <!--Battery Container-->
+            <TextView
+                android:id="@+id/containerBatteryTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_battery_container" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/containerBattery_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_battery_container"
+                    android:src="@drawable/container_battery" />
+
+                <TextView
+                    android:id="@+id/containerBattery_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/battery_container" />
+            </LinearLayout>
+
+            <!--Chemical Container-->
+            <TextView
+                android:id="@+id/containerChemicalTitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_chemical_container" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/containerChemical_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_chemical_container"
+                    android:src="@drawable/container_chemical" />
+
+                <TextView
+                    android:id="@+id/containerChemical_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/chemical_container" />
+            </LinearLayout>
+
+            <!--Gas Container-->
+            <TextView
+                android:id="@+id/containerGasTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_gas_container" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/containerGas_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_gas_container"
+                    android:src="@drawable/container_gas" />
+
+                <TextView
+                    android:id="@+id/containerGas_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/gas_container" />
+            </LinearLayout>
+
+            <!--Water Container-->
+            <TextView
+                android:id="@+id/containerWaterTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_water_container" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/containerWater_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_water_container"
+                    android:src="@drawable/container_water" />
+
+                <TextView
+                    android:id="@+id/containerWater_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/water_container" />
+            </LinearLayout>
+
+            <!--Controller-->
+            <TextView
+                android:id="@+id/controllerTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_controller" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/controller_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_controller"
+                    android:src="@drawable/controller" />
+
+                <TextView
+                    android:id="@+id/controller_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/controller" />
+            </LinearLayout>
+
+            <!--Drill-->
+            <TextView
+                android:id="@+id/drillTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_drill" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/drill_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_drill"
+                    android:src="@drawable/drill" />
+
+                <TextView
+                    android:id="@+id/drill_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/drill" />
+            </LinearLayout>
+
+            <!--Electric Engine-->
+            <TextView
+                android:id="@+id/electricEngineTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textSize="16sp"
+                android:text="@string/title_electric_engine" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/electricEngine_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_electric_engine"
+                    android:src="@drawable/electric_engine" />
+
+                <TextView
+                    android:id="@+id/electricEngine_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/electric_engine" />
+            </LinearLayout>
+
+            <!--Gas Engine-->
+            <TextView
+                android:id="@+id/gasEngineTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_gas_engine" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/gasEngine_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_gas_engine"
+                    android:src="@drawable/gas_engine" />
+
+                <TextView
+                    android:id="@+id/gasEngine_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/gas_engine" />
+            </LinearLayout>
+
+            <!--Headlight-->
+            <TextView
+                android:id="@+id/headlightTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_headlight" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/headlight_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_headlight"
+                    android:src="@drawable/headlight" />
+
+                <TextView
+                    android:id="@+id/headlight_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/headlight" />
+            </LinearLayout>
+
+            <!--Logic Gate-->
+            <TextView
+                android:id="@+id/logicGateTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_logic_gate" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/logicGate_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_logic_gate"
+                    android:src="@drawable/logic_gate" />
+
+                <TextView
+                    android:id="@+id/logicGate_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/logic_gate" />
+            </LinearLayout>
+
+            <!--Piston-->
+            <TextView
+                android:id="@+id/pistonTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_piston" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/piston_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_piston"
+                    android:src="@drawable/piston" />
+
+                <TextView
+                    android:id="@+id/piston_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/piston" />
+            </LinearLayout>
+
+            <!--Driver's Saddle-->
+            <TextView
+                android:id="@+id/saddleDriversTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_drivers_saddle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/saddleDrivers_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_drivers_saddle"
+                    android:src="@drawable/saddle_drivers" />
+
+                <TextView
+                    android:id="@+id/saddleDrivers_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/drivers_saddle" />
+            </LinearLayout>
+
+            <!--Saddle-->
+            <TextView
+                android:id="@+id/saddleTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_saddle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/saddle_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_saddle"
+                    android:src="@drawable/saddle" />
+
+                <TextView
+                    android:id="@+id/saddle_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/saddle" />
+            </LinearLayout>
+
+            <!--Saw Blade-->
+            <TextView
+                android:id="@+id/sawBladeTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_saw_blade" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/sawBlade_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_saw_blade"
+                    android:src="@drawable/saw_blade" />
+
+                <TextView
+                    android:id="@+id/sawBlade_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/saw_blade" />
+            </LinearLayout>
+
+            <!--Driver's Seat-->
+            <TextView
+                android:id="@+id/seatDriversTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_drivers_seat" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seatDrivers_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_drivers_seat"
+                    android:src="@drawable/seat_drivers" />
+
+                <TextView
+                    android:id="@+id/seatDrivers_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/drivers_seat" />
+            </LinearLayout>
+
+            <!--Seat-->
+            <TextView
+                android:id="@+id/seatTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_seat" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_seat"
+                    android:src="@drawable/seat" />
+
+                <TextView
+                    android:id="@+id/seat_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/seat" />
+            </LinearLayout>
+
+            <!--Sensor-->
+            <TextView
+                android:id="@+id/sensorTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_sensor" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/sensor_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_sensor"
+                    android:src="@drawable/sensor" />
+
+                <TextView
+                    android:id="@+id/sensor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/sensor" />
+            </LinearLayout>
+
+            <!--Off-Road Suspension-->
+            <TextView
+                android:id="@+id/suspensionOffRoadTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_off_road_suspension" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/suspensionOffRoad_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_off_road_suspension"
+                    android:src="@drawable/suspension_off_road" />
+
+                <TextView
+                    android:id="@+id/suspensionOffRoad_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/off_road_suspension" />
+            </LinearLayout>
+
+            <!--Sport Suspension-->
+            <TextView
+                android:id="@+id/suspensionSportTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_sport_suspension" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/suspensionSpot_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_sport_suspension"
+                    android:src="@drawable/suspension_sport" />
+
+                <TextView
+                    android:id="@+id/suspensionSport_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/sport_suspension" />
+            </LinearLayout>
+
+            <!--Switch-->
+            <TextView
+                android:id="@+id/switchTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_switch" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/switch_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_switch"
+                    android:src="@drawable/switch_icon" />
+
+                <TextView
+                    android:id="@+id/switch_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/switch_rec" />
+            </LinearLayout>
+
+            <!--Thruster-->
+            <TextView
+                android:id="@+id/thrusterTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_thruster" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/thruster_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_thruster"
+                    android:src="@drawable/thruster" />
+
+                <TextView
+                    android:id="@+id/thruster_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/thruster" />
+            </LinearLayout>
+
+            <!--Timer-->
+            <TextView
+                android:id="@+id/timerTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_timer" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/timer_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_timer"
+                    android:src="@drawable/timer" />
+
+                <TextView
+                    android:id="@+id/timer_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/timer" />
+            </LinearLayout>
+
+            <!--Vacuum Pipe-->
+            <TextView
+                android:id="@+id/vacuumPipeTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_vacuum_pipe" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/vacuumPipe_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_vacuum_pipe"
+                    android:src="@drawable/vacuum_pipe" />
+
+                <TextView
+                    android:id="@+id/vacuumPipe_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/vacuum_pipe" />
+            </LinearLayout>
+
+            <!--Vacuum Pipe Corner-->
+            <TextView
+                android:id="@+id/vacuumPipeCornerTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_vacuum_pipe_corner" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/vacuumPipeCorner_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_vacuum_pipe_corner"
+                    android:src="@drawable/vacuum_pipe_corner" />
+
+                <TextView
+                    android:id="@+id/vacuumPipeCorner_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/vacuum_pipe_corner" />
+            </LinearLayout>
+
+            <!--Vacuum Pump-->
+            <TextView
+                android:id="@+id/vacuumPumpTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/title_vacuum_pump" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/vacuumPump_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_vacuum_pump"
+                    android:src="@drawable/vacuum_pump" />
+
+                <TextView
+                    android:id="@+id/vacuumPump_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/vacuum_pump" />
+            </LinearLayout>
+
+            <!--Water Cannon-->
+            <TextView
+                android:id="@+id/waterCannonTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textSize="16sp"
+                android:text="@string/title_water_cannon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/waterCannon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_water_cannon"
+                    android:src="@drawable/water_cannon" />
+
+                <TextView
+                    android:id="@+id/waterCannon_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/water_cannon"/>
+            </LinearLayout>
+
+            <!--Wheel-->
+            <TextView
+                android:id="@+id/wheelTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textSize="16sp"
+                android:text="@string/title_wheel" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/wheel_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_wheel"
+                    android:src="@drawable/wheel" />
+
+                <TextView
+                    android:id="@+id/wheel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/wheel" />
+            </LinearLayout>
+
+            <!--Big Wheel-->
+            <TextView
+                android:id="@+id/bigWheelTitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:textSize="16sp"
+                android:text="@string/title_wheel_big" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/wheelBig_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:contentDescription="@string/title_wheel_big"
+                    android:src="@drawable/wheel_big" />
+
+                <TextView
+                    android:id="@+id/wheelBig_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textSize="18sp"
+                    android:text="@string/wheel_big" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
